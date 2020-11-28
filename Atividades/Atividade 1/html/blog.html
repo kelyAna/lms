@@ -16,12 +16,12 @@
 
         <nav>
             <ul>
-                <li>
+                <li class="menu">
                     <a href="https://tecnoblog.net/263808/o-que-e-inteligencia-artificial/">
                         <b>Inteligência Artificial</b>
                     </a>
                 </li>
-                <li>
+                <li class="menu">
                     <a
                         href="https://saude.abril.com.br/blog/com-a-palavra/a-inteligencia-artificial-vai-revolucionar-a-medicina-que-conhecemos/">
                         <b>IA na saúde</b>
@@ -179,31 +179,33 @@
 
     <article>
         <header id="artigo3_header">
-            <h3>Cadastre-se e receba mais informações</h3>
+            <h3>
+                Cadastre-se e receba nossos serviços
+            </h3>
         </header>
 
         <section>
             <center>
                 <fieldset>
                     <legend>Informações</legend>
-    
+
                     <form action="https://www.w3schools.com/action_page.php" method="GET">
-    
-                        Nome:<input type="text" maxlength="15"><br> <br>
-                        <input type="text" value="Preencha as informações." disabled><br>
+
+                        Nome: <input type="text" maxlength="15"><br> <br>
+                        <input type="text" value="Preencha as informações." disabled><br> <br>
                         <center>
-                            <h4>
-                                Informações pagas ou gratuitas:
-                            </h4>
+                            Informações pagas ou gratuitas:
                         </center>
                         Paga: <input type="radio" name="opcoes" value="paga"> <br>
-                        Gratuita: <input type="radio" name="opcoes" value="gratuita"> <br>
-                        Número de informações anuais: <input type="number" min="25000" max="30000"> <br> <br>
+                        Gratuita: <input type="radio" name="opcoes" value="gratuita"> <br> <br>
+                        Selecione o número de informações anuais: <br>
+
+                        <input type="number" min="25000" max="30000" value="numero_info"> <br> <br>
                         Avalie nossas informações: <br>
-                        Boas:<input type="checkbox"> <br>
-                        Ótimas: <input type="checkbox"> <br>
-                        Ruins: <input type="checkbox"> <br> <br>
-        
+                        Boas:<input type="checkbox" value="boas"> <br>
+                        Ótimas: <input type="checkbox" value="otimas"> <br>
+                        Ruins: <input type="checkbox" value="ruins"> <br> <br>
+
                         <input type="submit" value="Cadastrar"> <br> <br>
                     </form>
                 </fieldset>

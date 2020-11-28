@@ -29,7 +29,6 @@ li a {
     text-decoration: none;
 }
   
-  /* Change the link color to #111 (black) on hover */
 li a:hover {
     color: rgb(106, 109, 112);
 }
@@ -37,6 +36,9 @@ li a:hover {
 li b{
     font-family: Apple Chancery, cursive;
     font-size: medium;
+}
+.menu a:hover{
+    background-color: rgb(200, 196, 196);
 }
 footer {
     left: 0;
@@ -49,6 +51,17 @@ footer {
 fieldset{
     width: 50%;
     margin: 0;
+}
+article{
+    padding: 0px;
+    font-size: 18px;
+    text-align: center;
+    background: rgb(214, 214, 206);
+    text-align: center;  
+}
+
+table{
+    margin: 20px 20px 20px 20px;
 }
 
 #clique{
@@ -68,18 +81,6 @@ fieldset{
     font-size: 30px;
     text-align: center;
     background: rgb(214, 214, 206);
-}
-
-article{
-    padding: 0px;
-    font-size: 18px;
-    text-align: center;
-    background: rgb(214, 214, 206);
-    text-align: center;  
-}
-
-table{
-    margin: 20px 20px 20px 20px;
 }
 
 #artigo1_header{
