@@ -1,0 +1,109 @@
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 20px;
+    background: #f7f4f4;
+}
+section p{
+    line-height: 20px;
+    text-align: justify;
+    margin: 20px 20px 20px 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+  
+li {
+    float: left;
+}
+  
+li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+}
+  
+  /* Change the link color to #111 (black) on hover */
+li a:hover {
+    color: rgb(106, 109, 112);
+}
+
+li b{
+    font-family: Apple Chancery, cursive;
+    font-size: medium;
+}
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    color:black;
+    text-align: center;
+}
+fieldset{
+    width: 50%;
+    margin: 0;
+}
+
+#clique{
+    display: block;
+    color: rgb(83, 81, 81);
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    float: left;
+}
+#clique:hover{
+    color: rgb(106, 109, 112);
+
+}
+#cabecalho{
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    background: rgb(214, 214, 206);
+}
+
+article{
+    padding: 0px;
+    font-size: 18px;
+    text-align: center;
+    background: rgb(214, 214, 206);
+    text-align: center;  
+}
+
+table{
+    margin: 20px 20px 20px 20px;
+}
+
+#artigo1_header{
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#artigo2_header{
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#artigo3_header{
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#nome_blog{
+    font-family: FreeMono, monospace;
+}
+
+#sobre{
+    width: 200px;
+    margin-left: 600px;
+}
+
+
