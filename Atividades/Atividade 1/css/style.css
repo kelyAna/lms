@@ -9,18 +9,18 @@ section p{
     text-align: justify;
     margin: 20px 20px 20px 20px;
 }
-
+img{
+    width: 20%;
+}
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
-  
 li {
     float: left;
 }
-  
 li a {
     display: block;
     color: rgb(0, 0, 0);
@@ -28,7 +28,6 @@ li a {
     padding: 10px 12px;
     text-decoration: none;
 }
-  
 li a:hover {
     color: rgb(106, 109, 112);
 }
@@ -50,7 +49,8 @@ footer {
 }
 fieldset{
     width: 50%;
-    margin: 0;
+    margin: auto;
+    border: 2px solid;
 }
 article{
     padding: 0px;
@@ -59,10 +59,15 @@ article{
     background: rgb(214, 214, 206);
     text-align: center;  
 }
-
-table{
+table td{
     margin: 20px 20px 20px 20px;
+    border: 1px solid black;
+    border-radius: 1%;
 }
+#tabela{
+    margin: auto;
+}
+
 
 #clique{
     display: block;
@@ -101,7 +106,12 @@ table{
 #nome_blog{
     font-family: FreeMono, monospace;
 }
-
+#botao_cadastro{
+    font-size: 15px;
+    padding:10px;
+    font-weight: bold;
+    border: 1px solid;
+}
 #sobre{
     width: 200px;
     margin-left: 600px;
