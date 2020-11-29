@@ -1,13 +1,28 @@
-
 body {
     font-family: 'Times New Roman', Times, serif;
     padding: 20px;
     background: #f7f4f4;
 }
+
+article{
+    padding: 0px;
+    font-size: 18px;
+    text-align: center;
+    background: rgb(214, 214, 206);
+    text-align: center;  
+}
+section{
+    align-items: center;
+    justify-content: center;
+
+}
 section p{
     line-height: 20px;
     text-align: justify;
     margin: 20px 20px 20px 20px;
+}
+section .noticias .imagens-noticias{
+    width: 70%;
 }
 img{
     width: 20%;
@@ -51,6 +66,20 @@ nav ul li b{
     font-family: Apple Chancery, cursive;
     font-size: medium;
 }
+fieldset{
+    width: 50%;
+    margin: auto;
+    border: 2px solid;
+}
+
+table td{
+    margin: 20px 20px 20px 20px;
+    border: 1px solid black;
+    border-radius: 1%;
+}
+section table{
+    margin: auto;
+}
 
 footer {
     left: 0;
@@ -60,27 +89,10 @@ footer {
     color:black;
     text-align: center;
 }
-fieldset{
-    width: 50%;
-    margin: auto;
-    border: 2px solid;
-}
-article{
-    padding: 0px;
-    font-size: 18px;
-    text-align: center;
-    background: rgb(214, 214, 206);
-    text-align: center;  
-}
-table td{
-    margin: 20px 20px 20px 20px;
-    border: 1px solid black;
-    border-radius: 1%;
-}
-#tabela{
-    margin: auto;
-}
 
+#noticias section h4{
+    border: 1px solid rgb(214, 214, 206);
+}
 
 #clique{
     display: block;
@@ -101,32 +113,48 @@ table td{
     background: rgb(214, 214, 206);
 }
 
-#artigo1_header{
+.artigos{
     padding: 20px;
     margin-top: 20px;
 }
 
-#artigo2_header{
+#noticias{
     padding: 20px;
     margin-top: 20px;
+    height: 100em;
 }
 
-#artigo3_header{
-    padding: 20px;
-    margin-top: 20px;
-}
-
-#nome_blog{
+#cabecalho h1{
     font-family: FreeMono, monospace;
 }
 #img_insta{
     width: 10%;
+    display: inline;
 }
 #img_linkedin{
     width: 8%;
+    display: inline;
 }
 #img_twitter{
     width: 6%;
+    display: inline;
+}
+.noticias {
+    width: 50%;
+    border: thin silver solid;
+    padding: 20px;
+    text-align: center;
+    font-style: italic;
+    margin-left: auto;
+    margin-right: auto
+}
+div.redes-sociais{
+    display: inline;
+}
+
+#img_mamografia{
+    width: 70px;
+    text-align: center;
 }
 #botao_cadastro{
     font-size: 15px;
@@ -138,5 +166,18 @@ table td{
     width: 200px;
     margin-left: 600px;
 }
-
-
+#artigo-sobre{
+    padding: 20px;
+    margin-top: 20px;
+}
+.leia-mais{
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px 12px;
+    margin: 0 1px;
+    text-decoration: none;
+}
+.leia-mais:hover{
+    color: rgb(106, 109, 112);
+}
