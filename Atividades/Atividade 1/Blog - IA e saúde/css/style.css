@@ -1,32 +1,64 @@
+/*
+    Estilização da fonte(font-family), 
+    da distância entre conteúdo e bordas(padding)
+    e da cor de fundo(background).
+*/
 body {
     font-family: 'Times New Roman', Times, serif;
     padding: 20px;
     background: #f7f4f4;
 }
-
+/*
+    Estilização da distância entre conteúdo e bordas(padding),
+    tamanho da fonte(font-size), alinhamento do texto(text-align),
+    cor de fundo(background). 
+*/
 article{
     padding: 0px;
     font-size: 18px;
     text-align: center;
     background: rgb(214, 214, 206);
-    text-align: center;  
 }
+/*
+    Estilização do alinhamento dos itens dentro da section(align-items)
+    e definição da distribuição do espaço entre e ao redor dos itens 
+    do conteúdo(justify-content).
+*/
 section{
     align-items: center;
     justify-content: center;
 
 }
+/*
+    Estilização do texto entre a tag p, dentro da section. 
+    Definição da altura da linha(line-height), 
+    do alinhamento do texto(text-align) e das margens.
+*/
 section p{
     line-height: 20px;
     text-align: justify;
     margin: 20px 20px 20px 20px;
 }
+/*
+    Estilização da altura da área do conteúdo dos elementos da 
+    classe noticias e das imagens (width)
+*/
 section .noticias .imagens-noticias{
     width: 70%;
 }
-img{
+/*
+    Estilização da altura da área do conteúdo dos elementos da imagem
+    do header.
+*/
+header img{
     width: 20%;
 }
+/*
+    Estilização da fonte(tamanho, estilo),
+    tipo de listagem da lista da navegação(list-style-type),
+    margens, da distância entre conteúdo e bordas(padding)
+    e do corte de um elemento bloco(oveflow).
+*/
 nav ul {
     font: 16px arial, tahoma, verdana;
     list-style-type: none;
@@ -34,11 +66,21 @@ nav ul {
     padding: 0;
     overflow: hidden;
 }
+/*
+    Estiliza a flexibilização do item da lista(float)
+    e da margem.
+*/
 nav ul li {
     float: left;
     margin: 20px; 
 
 }
+/*
+    Estiliza do tipo de caixa de renderização(display),
+    a cor(color), alinhamento do texto(text-align), 
+    distância entre conteúdo e bordas(padding), margens
+    e sublinhamento dos links da navegação.
+*/
 nav ul li a {
     display: block;
     color: rgb(0, 0, 0);
@@ -47,40 +89,73 @@ nav ul li a {
     margin: 0 1px;
     text-decoration: none;
 }
+/*
+    Estilização do tipo de caixa de renderização do sub-menu.
+*/
 nav li ul{
     display: none;
 }
+/*  
+    Estilização da função hover, quando ocorre clicagem nos itens do menu, 
+    mudando a cor.
+*/
 nav ul li a:hover {
     color: rgb(106, 109, 112);
 }
+/*
+    Estilização da função hover, quando ocorre clicagem nos itens do menu, 
+    mudando o tipo de renderização e a posição.
+*/
 nav li:hover ul{
     display: block;
     position: relative;
 }
+/*
+    Estilização da função hover, quando ocorre clicagem nos itens do menu, 
+    mudando a flexibilização e o tamanho da fonte.
+*/
 nav li:hover li{
     float:none;
     font-size: 12px;
 }
-    
+   
+/*
+    Estilização do estilo e do tamanho da fonte de cada item da lista de 
+    navegação.
+*/
 nav ul li b{
     font-family: Apple Chancery, cursive;
     font-size: medium;
 }
+/*
+    Estilização da altura da área do conteúdo dos elementos do fieldseat,
+    margem e das bordas.
+*/
 fieldset{
     width: 50%;
     margin: auto;
     border: 2px solid;
 }
-
+/*
+    Estilização das margens das células td, das bordas 
+    e das bordas arredondadas.
+*/
 table td{
     margin: 20px 20px 20px 20px;
     border: 1px solid black;
     border-radius: 1%;
 }
+/*
+    Definição da margem da tabela da section
+*/
 section table{
     margin: auto;
 }
-
+/*
+    Estilização do footer, definindo as propriedades de posicionamento,
+    largura da área de contéudo(width), cor de fundo(background), cor dos elementos(color)
+    e alinhamento do texto(text-align).
+*/
 footer {
     left: 0;
     bottom: 0;
@@ -89,56 +164,80 @@ footer {
     color:black;
     text-align: center;
 }
-
+/*
+    Estilização da borda do h4 da section.
+*/
 #noticias section h4{
     border: 1px solid rgb(214, 214, 206);
 }
-
-#clique{
-    display: block;
-    color: rgb(83, 81, 81);
-    text-align: center;
-    padding: 10px 12px;
-    text-decoration: none;
-    float: left;
-}
-#clique:hover{
-    color: rgb(106, 109, 112);
-
-}
+/*
+    Estilização do cabeçalho, com relação à distância entre conteúdo e bordas(padding),
+    tamanho da fonte(font-size), alinhamento do texto(text-align) e 
+    a cor de fundo(background)
+*/
 #cabecalho{
     padding: 20px;
     font-size: 30px;
     text-align: center;
     background: rgb(214, 214, 206);
 }
-
+/*
+    Estilização distância entre o conteúdo e bordas da classe artigos 
+    e da margem.
+*/
 .artigos{
     padding: 20px;
     margin-top: 20px;
 }
-
+/*
+    Estilização da distância entre o conteúdo e bordas(padding),
+    margem e altura do id noticias.
+*/
 #noticias{
     padding: 20px;
     margin-top: 20px;
     height: 100em;
 }
-
+/*
+    Estilização do h1 do cabeçalho com relação ao estilo da fonte.
+*/
 #cabecalho h1{
     font-family: FreeMono, monospace;
 }
+
+/*
+    Estilização da largura da área de contéudo(width) e do
+    tipo de caixa de renderização(display) da imagem da logo do instagram.
+*/
 #img_insta{
     width: 10%;
     display: inline;
 }
+/*
+    Estilização da largura da área de contéudo(width) e do
+    tipo de caixa de renderização(display) da imagem da logo
+    linkedin.
+*/
 #img_linkedin{
     width: 8%;
     display: inline;
 }
+/*
+    Estilização da largura da área de contéudo(width) e do
+    tipo de caixa de renderização(display) da imagem da 
+    logo do twitter.
+*/
 #img_twitter{
     width: 6%;
     display: inline;
 }
+
+/*
+    Estilização da largura da área de conteúdo(width),
+    bordas, distância do conteúdo entre as bordas(padding),
+    alinhamento de texto(text-aling), estilo da fonte(font-style),
+    margens de esquerda e direita da class noticias.
+*/
 .noticias {
     width: 50%;
     border: thin silver solid;
@@ -148,28 +247,55 @@ footer {
     margin-left: auto;
     margin-right: auto
 }
+/*
+    Estilização do tipo de caixa de renderização(display)
+*/
 div.redes-sociais{
     display: inline;
 }
-
+/*
+    Estilização da imag_mamografia, com relação à largura da área de conteúdo(width),
+    alinhamento do texto(text-aling).
+*/
 #img_mamografia{
     width: 70px;
     text-align: center;
 }
+
+/*
+    Estilização do botao_cadastro, definindo o tamanho da fonte(font-size),
+    distância do conteúdo entre as bordas(padding), estilo da fonte(font-weight),
+    e bordas.
+*/
 #botao_cadastro{
     font-size: 15px;
     padding:10px;
     font-weight: bold;
     border: 1px solid;
 }
+/*
+    Estilização da largura da área do conteúdo e 
+    da margem, do id sobre.
+*/
 #sobre{
     width: 200px;
     margin-left: 600px;
 }
+
+/*
+    Estilização da distância entre conteúdo e bordas e da margem, 
+    do id artigo-sobre.
+*/
 #artigo-sobre{
     padding: 20px;
     margin-top: 20px;
 }
+
+/*
+    Estilização do tipo de renderização(display), cor(color),
+    alinhamento de texto(text-aling), distância entre conteúdo e bordas(padding),
+    margem e definição de formatação(text-decoration) da class leia-mais.
+*/
 .leia-mais{
     display: block;
     color: rgb(0, 0, 0);
@@ -178,6 +304,10 @@ div.redes-sociais{
     margin: 0 1px;
     text-decoration: none;
 }
+
+/*
+    Estilização da class leia-mais, utilizando a função hover para mudança de cor.
+*/
 .leia-mais:hover{
     color: rgb(106, 109, 112);
 }

@@ -9,13 +9,26 @@
 </head>
 
 <body>
+    <!--
+        Este é o cabecalho do Blog Revista IA & Saúde. Aqui, temos um header com o id "cabeçalho", que 
+        envolve o nome da revista(tag h1) e o menu(tag nav). 
+    -->
     <header id="cabecalho">
+        <!--
+            Nome do Blog, como solicitado, em uma tag h1.
+        -->
         <h1>
             REVISTA IA & SAÚDE
         </h1>
-
+        <!--
+            Como solicitado na atividade, fora usado a tag nav para estruturar um menu simples.
+        -->
         <nav class="menu">
             <ul>
+                 <!--
+                    É importante destacar neste primeiro elemento do menu,
+                     NOTÍCIAS, temos um sub-menu estruturado por uma lista simples.
+                -->
                 <li>
                     <a href="">
                         <b>NOTÍCIAS</b>
@@ -36,6 +49,10 @@
                         <b>INÍCIO</b>
                     </a>
                 </li>
+                <!--
+                    Como foi socilitado na atividade, um dos links teria que ser uma imagem. Dessa forma,
+                    encontrei uma imagem simples "sobre nós" e coloqueia-a no menu.
+                -->
                 <li>
                     <a href="sobre.html" id="img_link">
                         <img src="../imagens/sobre.png" id="sobre">
@@ -45,13 +62,25 @@
         </nav>
     </header>
 
-
+    <!--
+        Nesta parte, como sugerido na atividade, fora utilizado tags semânticas que vimos em aula. Dessa forma,
+        utilizei a tag article para envolver cada matéria/artigo do blog. Cada article é envolvimento por uma class
+        noticias, que utilizei no css para estilizar.
+    -->
     <article id="noticias">
+        <!--
+            Cabeçalho envolvido por um header.
+        -->
         <header>
             <h2>Inteligência Artificial</h2>
         </header>
-
+        <!--
+            A tag section foi utilizada para envolver o contéudo(textos e imagens) que compõem as notícias.
+        -->
         <section>
+            <!--
+                Cada notícia foi envolvida por uma div com uma class, para ser utilizada no css.
+            -->
             <div class="noticias">
                 <h3>Câncer de mama: inteligência artificial bate médicos em diagnósticos</h3>
                 Fergus Walsh, BBC, 2 janeiro 2020 <br>
@@ -61,6 +90,7 @@
                 <a href="https://www.bbc.com/portuguese/geral-50971176" class="leia-mais">LEIA MAIS></a>
               </div>
               <br>
+
               <div class="noticias">
                 <h3>"Como um robô me ajudou a superar a dor da morte de um amigo por câncer"</h3>
                 Stav Dimitropoulos,da BBC, 10:46 18 janeiro 2020                <br>
@@ -70,6 +100,7 @@
                 <a href="https://www.bbc.com/portuguese/geral-51047448" class="leia-mais">LEIA MAIS></a>
               </div>
               <br>
+
               <div class="noticias">
                 <h3>Por que as tecnologias de reconhecimento facial são tão contestadas</h3>
                 Matthew Wall, Editor de Tecnologia de Negócios, 19:49 5 de julho de 2019              
@@ -79,10 +110,14 @@
                      mas e se essas informações foram enviesadas?</h4>
                 <a href="https://www.bbc.com/portuguese/geral-48889883" class="leia-mais">LEIA MAIS></a>
               </div>
+
         </section>
 
     </article>
 
+    <!--
+        O footer foi bem simples, apenas para estrutura.
+    -->
     <footer>
         <p>Todos os direitos reservados.</p>
     </footer>

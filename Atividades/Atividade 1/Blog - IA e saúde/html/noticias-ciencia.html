@@ -9,13 +9,27 @@
 </head>
 
 <body>
+    <!--
+        Este é o cabecalho do Blog Revista IA & Saúde. Aqui, temos um header com o id "cabeçalho", que 
+        envolve o nome da revista(tag h1) e o menu(tag nav). 
+    -->
     <header id="cabecalho">
+        <!--
+            Nome do Blog, como solicitado, em uma tag h1.
+        -->
         <h1>
             REVISTA IA & SAÚDE
         </h1>
 
+        <!--
+            Como solicitado na atividade, fora usado a tag nav para estruturar um menu simples.
+        -->
         <nav class="menu">
             <ul>
+                <!--
+                    É importante destacar neste primeiro elemento do menu,
+                     NOTÍCIAS, temos um sub-menu estruturado por uma lista simples.
+                -->
                 <li>
                     <a href="">
                         <b>NOTÍCIAS</b>
@@ -36,6 +50,10 @@
                         <b>INÍCIO</b>
                     </a>
                 </li>
+                <!--
+                    Como foi socilitado na atividade, um dos links teria que ser uma imagem. Dessa forma,
+                    encontrei uma imagem simples "sobre nós" e coloqueia-a no menu.
+                -->
                 <li>
                     <a href="sobre.html" id="img_link">
                         <img src="../imagens/sobre.png" id="sobre">
@@ -45,38 +63,57 @@
         </nav>
     </header>
 
-
+    <!--
+        Nesta parte, como sugerido na atividade, fora utilizado tags semânticas que vimos em aula. Dessa forma,
+        utilizei a tag article para envolver cada matéria/artigo do blog. Cada article é envolvimento por uma class
+        noticias, que utilizei no css para estilizar.
+    -->
     <article id="noticias">
+        <!--
+            Cabeçalho envolvido por um header.
+        -->
         <header>
             <h2>Inteligência Artificial</h2>
         </header>
 
+        <!--
+            A tag section foi utilizada para envolver o contéudo(textos e imagens) que compõem as notícias.
+        -->
         <section>
+            <!--
+                Cada notícia foi envolvida por uma div com uma class, para ser utilizada no css.
+            -->
             <div class="noticias">
-                <h3>Os estranhos ataques de orcas contra barcos na costa de Portugal e da Espanha que intrigam cientistas</h3>
+                <h3>Os estranhos ataques de orcas contra barcos na costa de Portugal e da Espanha que intrigam
+                    cientistas</h3>
                 Victoria Gill, Repórter de Ciência da BBC News, 17:39 26 novembro 2020<br>
                 <img src="../imagens/orcas.jpg" alt="" class="imagens-noticias">
-                <h4>Independentemente de como descrevemos e avaliamos esses episódios 
-                    a partir de uma perspectiva humana, são um comportamento novo e 
+                <h4>Independentemente de como descrevemos e avaliamos esses episódios
+                    a partir de uma perspectiva humana, são um comportamento novo e
                     potencialmente perigoso — tanto para pessoas nos barcos quanto para animais.
                 </h4>
                 <a href="https://www.bbc.com/portuguese/internacional-55073047" class="leia-mais">LEIA MAIS></a>
-              </div>
-              <br>
-              <div class="noticias">
-                <h3>O excepcional alinhamento de Júpiter e Saturno, que não acontece de tal modo desde a Idade Média</h3>
+            </div>
+            <br>
+
+            <div class="noticias">
+                <h3>O excepcional alinhamento de Júpiter e Saturno, que não acontece de tal modo desde a Idade Média
+                </h3>
                 Alejandro Millán Valencia, Da BBC News Mundo,13:55 25 novembro 2020<br>
                 <img src="../imagens/planetas.jpg" alt="" class="imagens-noticias">
-                <h4>21 de dezembro marcará o ápice da "grande conjunção" entre os dois planetas, que poderá ser vista 
+                <h4>21 de dezembro marcará o ápice da "grande conjunção" entre os dois planetas, que poderá ser vista
                     facilmente de horizontes abertos; proximidade tamanha entre eles só ocorreu séculos atrás.</h4>
                 <a href="https://www.bbc.com/portuguese/geral-55073369" class="leia-mais">LEIA MAIS></a>
-              </div>
-              <br>
-             
+            </div>
+            <br>
+
         </section>
 
     </article>
 
+    <!--
+        O footer foi bem simples, apenas para estrutura.
+    -->
     <footer>
         <p>Todos os direitos reservados.</p>
     </footer>
