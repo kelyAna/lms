@@ -40,13 +40,6 @@ section p{
     margin: 20px 20px 20px 20px;
 }
 /*
-    Estilização da altura da área do conteúdo dos elementos da 
-    classe noticias e das imagens (width)
-*/
-section .noticias .imagens-noticias{
-    width: 70%;
-}
-/*
     Estilização da altura da área do conteúdo dos elementos da imagem
     do header.
 */
@@ -89,44 +82,8 @@ nav ul li a {
     margin: 0 1px;
     text-decoration: none;
 }
-/*
-    Estilização do tipo de caixa de renderização do sub-menu.
-*/
-nav li ul{
-    display: none;
-}
-/*  
-    Estilização da função hover, quando ocorre clicagem nos itens do menu, 
-    mudando a cor.
-*/
-nav ul li a:hover {
-    color: rgb(106, 109, 112);
-}
-/*
-    Estilização da função hover, quando ocorre clicagem nos itens do menu, 
-    mudando o tipo de renderização e a posição.
-*/
-nav li:hover ul{
-    display: block;
-    position: relative;
-}
-/*
-    Estilização da função hover, quando ocorre clicagem nos itens do menu, 
-    mudando a flexibilização e o tamanho da fonte.
-*/
-nav li:hover li{
-    float:none;
-    font-size: 12px;
-}
-   
-/*
-    Estilização do estilo e do tamanho da fonte de cada item da lista de 
-    navegação.
-*/
-nav ul li b{
-    font-family: Apple Chancery, cursive;
-    font-size: medium;
-}
+
+
 /*
     Estilização da altura da área do conteúdo dos elementos do fieldseat,
     margem e das bordas.
@@ -164,12 +121,7 @@ footer {
     color:black;
     text-align: center;
 }
-/*
-    Estilização da borda do h4 da section.
-*/
-#noticias section h4{
-    border: 1px solid rgb(214, 214, 206);
-}
+
 /*
     Estilização do cabeçalho, com relação à distância entre conteúdo e bordas(padding),
     tamanho da fonte(font-size), alinhamento do texto(text-align) e 
@@ -189,77 +141,12 @@ footer {
     padding: 20px;
     margin-top: 20px;
 }
-/*
-    Estilização da distância entre o conteúdo e bordas(padding),
-    margem e altura do id noticias.
-*/
-#noticias{
-    padding: 20px;
-    margin-top: 20px;
-    height: 100em;
-}
+
 /*
     Estilização do h1 do cabeçalho com relação ao estilo da fonte.
 */
 #cabecalho h1{
     font-family: FreeMono, monospace;
-}
-
-/*
-    Estilização da largura da área de contéudo(width) e do
-    tipo de caixa de renderização(display) da imagem da logo do instagram.
-*/
-#img_insta{
-    width: 10%;
-    display: inline;
-}
-/*
-    Estilização da largura da área de contéudo(width) e do
-    tipo de caixa de renderização(display) da imagem da logo
-    linkedin.
-*/
-#img_linkedin{
-    width: 8%;
-    display: inline;
-}
-/*
-    Estilização da largura da área de contéudo(width) e do
-    tipo de caixa de renderização(display) da imagem da 
-    logo do twitter.
-*/
-#img_twitter{
-    width: 6%;
-    display: inline;
-}
-
-/*
-    Estilização da largura da área de conteúdo(width),
-    bordas, distância do conteúdo entre as bordas(padding),
-    alinhamento de texto(text-aling), estilo da fonte(font-style),
-    margens de esquerda e direita da class noticias.
-*/
-.noticias {
-    width: 50%;
-    border: thin silver solid;
-    padding: 20px;
-    text-align: center;
-    font-style: italic;
-    margin-left: auto;
-    margin-right: auto
-}
-/*
-    Estilização do tipo de caixa de renderização(display)
-*/
-div.redes-sociais{
-    display: inline;
-}
-/*
-    Estilização da imag_mamografia, com relação à largura da área de conteúdo(width),
-    alinhamento do texto(text-aling).
-*/
-#img_mamografia{
-    width: 70px;
-    text-align: center;
 }
 
 /*
@@ -280,34 +167,4 @@ div.redes-sociais{
 #sobre{
     width: 200px;
     margin-left: 600px;
-}
-
-/*
-    Estilização da distância entre conteúdo e bordas e da margem, 
-    do id artigo-sobre.
-*/
-#artigo-sobre{
-    padding: 20px;
-    margin-top: 20px;
-}
-
-/*
-    Estilização do tipo de renderização(display), cor(color),
-    alinhamento de texto(text-aling), distância entre conteúdo e bordas(padding),
-    margem e definição de formatação(text-decoration) da class leia-mais.
-*/
-.leia-mais{
-    display: block;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 10px 12px;
-    margin: 0 1px;
-    text-decoration: none;
-}
-
-/*
-    Estilização da class leia-mais, utilizando a função hover para mudança de cor.
-*/
-.leia-mais:hover{
-    color: rgb(106, 109, 112);
 }
