@@ -1,0 +1,24 @@
+h1{
+    color: blue;
+    font-size: 12px;
+}
+
+#meu-titulo{
+    font-size: 50px;
+}
+
+.meu-titulo-personalizado{
+    color: chartreuse;
+}
+
+div p {
+    color: red;
+}
+
+.div-estilizada .paragrafo-estilizado{
+    color: cyan;
+}
+
+div .paragrafo-estilizado{
+    color: darkmagenta;
+}

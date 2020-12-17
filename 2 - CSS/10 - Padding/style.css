@@ -1,0 +1,19 @@
+.div-1{
+    background-color: burlywood;
+    width: 400px;
+    height: 400px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.div-1 .interna{
+    background-color: salmon;
+    height: 200px;
+    width: 200px;
+}
+.div-2{
+    background-color:rosybrown;
+    width: 400px;
+    height: 400px;
+    padding: 20px;
