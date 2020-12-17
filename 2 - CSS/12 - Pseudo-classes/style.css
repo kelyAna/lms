@@ -1,0 +1,15 @@
+.meu-link:link{
+    color: salmon;
+}
+
+.meu-link:visited{
+    color: sienna;
+}
+
+.meu-link:hover{
+    color: teal;
+}
+
+.meu-link:active{
+    color: yellow;
+}
