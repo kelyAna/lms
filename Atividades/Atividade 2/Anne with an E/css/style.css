@@ -1,0 +1,62 @@
+body{
+    background-color: rgb(211, 205, 205);
+    margin: 20px;
+    border: 2px solid wheat;
+}
+
+#cabecalho{
+    height: 200px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+#cabecalho img{
+    width: 400px;
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+
+.menu{
+    display: inline;
+}
+
+.artigos{
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.artigos .cabecalhos{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+section{
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+section p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: justify;
+    margin: 20px 20px 20px 20px;
+}
+
+.rodape{
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.menu{
+    text-align: center;
+}
+
+.menu .botao{
+    display: inline-block;
+}

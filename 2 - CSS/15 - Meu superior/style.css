@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navegador{
+    display: flex;
+    background-color: darkgrey;
+}
+
+.navegador > .botao-navegador{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navegador > .botao-navegador:hover{
+    background-color: rgb(116, 108, 108);
+}

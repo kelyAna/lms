@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navegador{
+    display: flex;
+    background-color: sandybrown;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.navegador > .botao{
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    color: snow;
+}
+
+.navegador > .botao:hover{
+    background-color: sienna;
+}
+
+.container{
+    height: 2000px;
+    margin-top: 38px;
+    padding: 20px;
+}

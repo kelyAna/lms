@@ -1,0 +1,23 @@
+.dropdown{
+    width: 120px;
+}
+.dropdown .texto-dropdown{
+    background-color: tan;
+    width: 150px;
+    padding: 20px 0px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.dropdown .content-dropdown{
+    display: none;
+    position: absolute;
+    height: 150px;
+    width: 200px;
+    background-color: khaki;
+}
+
+.dropdown:hover .content-dropdown{
+    display: block;
+}
+

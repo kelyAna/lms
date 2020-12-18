@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.ex1{
+    border: 3px solid black;
+    height: 400px;
+    width: 400px;
+    margin: auto;
+}
+
+.div-1{
+    position: static;
+}
+
+.div-2{
+    position: static;
+    background-color: slategrey;
+    height: 200px;
+    width: 200px;
+}
+
+.ex2{
+    border: 3px solid black;
+    height: 400px;
+    width: 400px;
+    margin: auto;
+}
+
+.tamanho-200-div-1{
+    background-color: burlywood;
+    height: 200px;
+    width: 200px;
+}
+
+.tamanho-200-div-2{
+    background-color: purple;
+    height: 200px;
+    width: 200px;
+}
+
+.div-3{
+    position: relative;
+    bottom: 0px;
+    right: 40px;
+}
+
+.div-5{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.div-7{
+    position: absolute;
+    top: 0;
+}
