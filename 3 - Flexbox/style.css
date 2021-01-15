@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    height: 500px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-between;
+}
+
+.item{
+    height: 200px;
+    width: 200px;
+    background-color: lightblue;
+}
+
+.item1{
+    height: 150px;
+    order: 5;
+}
+
+.item2{
+    height: 150px;
+}
+
+.div1{
+    width: 400px;
+    height: 400px;
+    background-color: rgb(68, 58, 17);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div2{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(177, 85, 85);
+}
+
+.navegador{
+    background-color: rgb(201, 200, 201);
+    display: flex;
+}
+
+.navegador a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.navegador a:hover{
+    background-color: rgb(138, 131, 138);
+    color: cornsilk;
+}
+
+.container1{
+    display: flex;
+}
+
+.container1 .menu1{
+    background-color: darkgray;
+    flex-grow: 1;
+}
+
+.container1 .menu1 a{
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.container1 .menu1 a:hover{
+    background-color: rgb(148, 140, 140);
+}
+.container1 .conteudo1{
+    background-color:rgb(160, 155, 155);
+    flex-grow: 3;
+}
+
+.container2{
+    display: flex;
+}
+
+.container2 .menu2{
+    background-color: darkgray;
+    flex-grow: 1;
+}
+.container2 .menu2 a{
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+.container2 .menu2 a:hover{
+    background-color: rgb(148, 140, 140);
+    flex-basis: 400px;
+}
+
+.container2 .conteudo2{
+    background-color:rgb(160, 155, 155);
+    flex-grow: 3;
+}
