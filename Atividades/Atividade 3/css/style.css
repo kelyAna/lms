@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(211, 209, 209);
+}
+
+.navegador{
+    background-color: rgb(150, 147, 147);
+    display: flex;
+}
+
+.navegador a{
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: rgb(43, 42, 42);
+}
+
+.navegador a:hover{
+    background-color: rgb(158, 154, 158);
+    color: rgb(0, 0, 0);
+}
+
+.container1{
+    display: flex;
+}
+
+.container1 .menu-esquerdo{
+    background-color: rgb(191, 188, 188);
+    flex-basis: 300px;
+    flex-shrink: 0;
+}
+
+.container1 .menu-esquerdo a{
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.container1 .menu-esquerdo a:hover{
+    background-color: rgb(169, 167, 167);
+}
+
+.conteudo{
+    flex-grow: 3;
+}
+
+.container1 .menu-direito{
+    background-color: rgb(191, 188, 188);
+}
+
+.container1 .menu-direito a{
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.container1 .menu-direito a:hover{
+    background-color: rgb(169, 167, 167);
+}
+
+.conteudo .galeria{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+}
+
+.conteudo .galeria img{
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
+
+.rodape{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape footer{
+    position:absolute;
+    bottom: 0;
+}
+
+
