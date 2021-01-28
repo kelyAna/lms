@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+}
+.arredondada{
+    background-color: rgb(240, 158, 5);
+    width: 200px;
+    height: 200px;
+    border-radius: 20px 40px 60px 80px;
+}
+
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 500px;
+}
+
+.galeria .card{
+    background-color: rgb(46, 27, 27);
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+}
+
+.galeria .card .imagem-card{
+    width: 200px;
+}
+
+.navegador{
+    display: flex;
+    background-color: grey;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.4);
+}
+
+.navegador a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 8px;
+}
+
+.navegador a:hover{
+    background-color: rgb(143, 140, 140);
+}
+
+.sombra-texto{
+    text-shadow: 10px 2px 3px rgba(83, 92, 83, 0.4);
+}
+
+.outra-div{
+    border: 1px solid black;
+}
+.minha-div{
+    width: 200px;
+    height: 200px;
+    background-color: sienna;
+    transform: translate(50px, 100px) rotate(20deg)
+    scale(1.5, 1.5) skew(10deg, 30deg); 
+}
+
+.transicao{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    transition: width 2s linear 1s;
+}
+
+.transicao:hover{
+    width: 400px;
+}
+
+.botao-3D{
+    background-color: rgb(20, 220, 193);
+    border: none;
+    outline: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.4);
+    transition: transform 500ms, box-shadow 500ms;
+}
+
+.botao-3D:active{
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.7);
+    transform: translate(3px, 3px);
+}
+
+.animacao{
+    background-color: blue;
+    width: 400px;
+    height: 400px;
+    animation-name: mudar-background, animacao-legal;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+}
+
+@keyframes mudar-background{
+    from{
+        background-color: blue;
+        width: 200px;
+    }
+
+    to{
+        background-color: burlywood;
+    }
+}
+
+@keyframes animacao-legal{
+    0% {
+        background-color: red; 
+        left:0px; 
+        top:0px;
+    }
+    25% {
+        background-color: rgb(97, 97, 77); 
+        left:200px; 
+        top:0px;
+    }
+    50% {
+        background-color: blue; 
+        left:200px; 
+        top:200px;
+    }
+    75% {
+        background-color: green; 
+        left:0px; 
+        top:200px;
+    }
+    100% {
+        background-color: red; 
+        left:0px; 
+        top:0px;
+    }
+}
+
+.loading{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border-width: 20px;
+    border-style: solid;
+    border-color: rgb(22, 22, 22) gray gray;
+    animation-name: rodar;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+@keyframes rodar{
+    from {
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.overlay{
+    position: relative;
+}
+
+.overlay img{
+    width: 200px;
+}
+
+.overlay .overlay-inner{
+    color: wheat;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 500ms;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay .overlay-inner:hover{
+    opacity: 1;
+}
+
+.overlay-inner .overlay-text{
+    display: block;
+}
+
+.colorida{
+    width: 400px;
+    height: 400px;
+    background-color: violet;
+}
+
+@media screen and (min-width: 480px){
+    .colorida{
+        background-color: tomato;
+    }
+}
