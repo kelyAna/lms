@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    position: relative;
+}
+.navegador{
+    background-color: rgb(153, 147, 147);
+    height: 40px;
+    width: 100%;
+}
+
+.navegador a{
+    padding: 10px;
+    display: flex;
+    float: right;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.4);
+}
+
+.navegador a:hover{
+    background-color: rgb(158, 154, 158);
+}
+
+.container{
+    display: flex;
+    width: 100%;
+}
+
+.container .menu-esquerdo{
+    flex-basis: 350px;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: flex-start;
+
+    height: 800px;
+    background-color: rgb(245, 195, 195);
+}
+
+.container .menu-esquerdo a{
+    box-shadow: 3px 3px 3px rgba(240, 131, 131, 0.4);
+    flex-direction: column;
+    text-decoration: none;
+
+    color: rgb(61, 58, 58);
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+
+    width: 100%;
+}
+
+.container .menu-esquerdo a:hover{
+    box-shadow: 3px 3px 3px rgba(119, 72, 72, 0.4);
+}
+
+.duas-celulas, .tres-celulas{
+    width: 90%;
+    height: 400px;
+    display: flex;
+}
+.container .conteudo{
+    display: block;
+    flex-grow: 1;
+    height: 800px;
+}
+
+#celula1{
+    background-color: rgb(228, 222, 222);
+    width: 50%;
+}
+
+#celula2{
+    background-color: #eee;
+    width: 50%;
+}
+
+#celula2 img{
+    height:100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#celula2 .overlay-faixa{
+    color: rgb(255, 255, 255);
+    position: relative;
+    background-color: rgba(49, 48, 48, 0.7);
+    height: 60px;
+    transition: opacity 500ms;
+    bottom: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#celula3{
+    background-color: rgb(218, 194, 165);
+    width: 364px;
+}
+
+#celula4{
+    background-color: rgb(177, 164, 148);
+    width: 364px;
+}
+
+#celula5{
+    background-color: rgb(214, 211, 163);
+    width: 364px;
+}
+
+.accordion:hover .accordion-item:hover .accordion-item-content{
+    height: 6em;
+    background-color: rgb(238, 234, 234);
+}
+
+.accordion-item-content,
+.accordion:hover .accordion-item-content {
+    height: 0;
+    overflow: hidden;
+}
+
+.accordion .accordion-item {
+  padding: 15px;
+  color: rgb(2, 2, 2);
+  font-weight: normal;
+  width: 240px;
+}
+
+.accordion h3 {
+  margin: 0;
+  height: 40px;
+}
+
+#linha-meio{
+    border: 1px solid black;
+    width: 90%;
+}
+
+#linha-inferior{
+    height: 1px;
+    padding: 1px;
+    background-color: black;
+    width: 100;
+}
+
+.animacao img{
+    width: 100%;
+    height: 200px;
+    position: relative;
+    animation: movimento 2s infinite;
+}
+@keyframes movimento{
+    from {
+        transform: rotate(0deg);
+        left: 0px;
+
+    }
+
+    to{
+        transform: rotate(360deg);
+        left: 200px;
+
+    }
+}
+
+@media screen and (max-width:768px){
+    .container{
+        flex-direction: column;
+        display: block;
+    }
+
+    .duas-celulas, .tres-celulas{
+        flex-direction: column;
+        width: 100%;
+    }
+    .tres-celulas{
+        display: block;
+    }
+    #celula1, #celula2, #celula3, #celula4, #celula5{
+        flex-basis: initial;
+        width: 100%;
+        height: 400%;
+    }
+
+    .menu-esquerdo{
+        height: 400px;
+
+        box-shadow: none;
+    }
+
+    .container .conteudo{
+        height: auto;
+    }
+
+    #celula2 img{
+        width: 200px;
+    }
+}
+
