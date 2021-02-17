@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manipulando HTML</title>
+
+    <style>
+        .fundo-azul{
+            background-color: blue;
+        }
+
+        .fonte-grande{
+            font-size: 30px;
+        }
+    </style>
 </head>
 
 <body>
@@ -12,6 +22,8 @@
         Título da minha página
     </h1>
     <img src="https://blog.arbolez.com/wp-content/uploads/2018/09/gatinhos-fofos.jpg" alt="">
+    <span class="meu-span">Texto</span>
+
 
     <script>
         let titulo = document.querySelector(".titulo");
@@ -21,7 +33,13 @@
 
         let foto = document.querySelector("img");
         foto.src = "https://blog.arbolez.com/wp-content/uploads/2018/09/gatinhos-fofos-2.jpg"
-    
+        
+        let span = document.querySelector(".meu-span");
+        span.classList.add("fundo-azul", "fonte-grande");
+        span.classList.remove("fundo-azul");
+        
+        // A função toggle alterna classes. Caso uma classe esteja aplicada, ele remove. Caso contrário, adiciona.
+        span.classList.toggle("fundo-azul")
        
     </script>
 
