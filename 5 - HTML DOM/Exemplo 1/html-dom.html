@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM</title>
+</head>
+
+<body>
+    <div id="div-principal">
+        <h1>Oi</h1>
+    </div>
+    <div id="container"></div>
+    <div class="classe-da-div">
+        <p>oi</p>
+    </div>
+    <!--
+        <script src="./javascript-arquivo.js">
+
+        </script>
+    -->
+
+
+    <!--
+        Recuperando elementos DOM
+    -->
+    <script>
+        let div_principal = document.getElementById("div-principal");
+        console.log(div_principal)
+
+        let divs = document.getElementsByTagName("div")
+        console.log(divs)
+
+        console.log(divs[1])
+
+        for(let i=0;i < divs.length;i++){
+            console.log(divs[i])
+        }
+
+        let classes_divs = document.getElementsByClassName("classe-da-div");
+        console.log(classes_divs)
+
+        let selector = document.querySelectorAll("classe-da-div");
+        console.log(selector)
+    </script>
+
+
+</body>
+
+</html>
