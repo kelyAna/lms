@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos HTML</title>
+
+    <style>
+        .fundo-rosa{
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="botao">Click here!</button>
+
+    <script>
+        let botao = document.querySelector(".botao");
+        botao.addEventListener("click", function(){
+            botao.classList.add("fundo-rosa")
+        })
+    </script>
+</body>
+
+</html>
