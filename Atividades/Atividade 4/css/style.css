@@ -159,13 +159,14 @@ body{
     from {
         transform: rotate(0deg);
         left: 0px;
+        right: 0px;
 
     }
 
     to{
         transform: rotate(360deg);
         left: 200px;
-
+        right: 200px;
     }
 }
 
