@@ -11,13 +11,13 @@ body{
     background-color: rgb(233, 229, 229);
 }
 
-.navegador #cabecalho-navegador{
+.navegador .cabecalho-navegador{
     display: flex;
     align-items: center;
     padding: 15px;
 }
 
-.navegador #cabecalho-navegador button{
+.navegador .cabecalho-navegador button{
     margin-left: auto;
     padding: 18px;
     border:2px solid rgba(0,0,0,.1);
@@ -25,13 +25,22 @@ body{
     cursor: pointer;
 }
 
-.navegador #menu-retratil a{
+.navegador .menu-retratil{
+    height: 0px;
+    overflow: hidden;
+    transition: height 600ms;
+}
+.navegador .menu-retratil.active{
+    height: 150px;
+}
+
+.navegador .menu-retratil a{
     text-decoration: none;
     color: black;
     display: block;
     padding: 10px;
 }
 
-.navegador #menu-retratil a:hover{
+.navegador .menu-retratil a:hover{
     background-color: rgb(218, 218, 217);
 }

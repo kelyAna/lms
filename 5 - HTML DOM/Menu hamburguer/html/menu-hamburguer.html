@@ -11,19 +11,31 @@
 
 <body>
     <nav class="navegador">
-        <div id="cabecalho-navegador">
+        <div class="cabecalho-navegador">
             <h3>Menu</h3>
             <button>
                 &#9776
             </button>
         </div>
-        <div id="menu-retratil">
+        <div class="menu-retratil">
             <a href="">Link 1</a>
             <a href="">Link 2</a>
             <a href="">Link 3</a>
             <a href="">Link 4</a>
         </div>
     </nav>
+
+    <script>
+        let button = document.querySelector(".navegador .cabecalho-navegador button");
+        console.log(button)
+
+        let menu_retratil = document.querySelector(".navegador .menu-retratil");
+        console.log(menu_retratil)
+
+        button.addEventListener("click", function(){
+            menu_retratil.classList.toggle("active")
+        })
+    </script>
 </body>
 
 </html>
