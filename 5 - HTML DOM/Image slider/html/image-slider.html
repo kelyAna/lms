@@ -9,26 +9,68 @@
 </head>
 
 <body>
-    <div id="slide-show">
+    <div class="slide-show">
         <img class="active" src="https://loremflickr.com/600/380/dog?random=1" alt="">
-        
-        <!--
-            <img src="https://loremflickr.com/600/380/dog?random=2" alt="">
+        <img src="https://loremflickr.com/600/380/dog?random=2" alt="">
         <img src="https://loremflickr.com/600/380/dog?random=3" alt="">
         <img src="https://loremflickr.com/600/380/dog?random=4" alt="">
-        <img src="https://loremflickr.com/600/380/dog?random=5" alt="">
-        <img src="https://loremflickr.com/600/380/dog?random=6" alt="">
-        -->
+       
 
-        <span id="seta-esquerda"> &lt; </span>
-        <span id="seta-direita"> &gt; </span>
-        <div id="indicadores">
+        <span class="seta-esquerda"> &lt; </span>
+        <span class="seta-direita"> &gt; </span>
+
+        <div class="indicadores">
             <div class="indicador active"></div>
             <div class="indicador"></div>
             <div class="indicador"></div>
             <div class="indicador"></div>
         </div>
+        
     </div>
+
+    <script>
+        let seta_esquerda = document.querySelector(".slide-show .seta-esquerda")
+        let seta_direita = document.querySelector(".slide-show .seta-direita")
+
+        let imagens = document.querySelectorAll(".slide-show img")
+        let indicadores = document.querySelectorAll(".slide-show .indicador")
+
+        let imagem_ativa = 0;
+        
+        seta_direita.addEventListener("click", function () {
+            imagens[imagem_ativa].classList.remove("active");
+            indicadores[imagem_ativa].classList.remove("active");
+
+            imagem_ativa = imagem_ativa + 1
+
+            //console.log(imagem_ativa)
+            //console.log(imagens.length)
+            if(imagem_ativa >= imagens.length){
+                imagem_ativa = 0;
+            }
+            //console.log(imagem_ativa)
+            //console.log(indicadores[imagem_ativa])
+            indicadores[imagem_ativa].classList.add("active")
+            imagens[imagem_ativa].classList.add("active");
+        })
+
+        seta_esquerda.addEventListener("click", function () {
+            imagens[imagem_ativa].classList.remove("active");
+            indicadores[imagem_ativa].classList.remove("active");
+
+            imagem_ativa = imagem_ativa - 1;
+
+            //console.log(imagem_ativa)
+            //console.log(imagens.length)
+            if(imagem_ativa < 0){
+                imagem_ativa = imagens.length - 1
+            }
+            //console.log(imagem_ativa)
+            //console.log(indicadores[imagem_ativa])
+            indicadores[imagem_ativa].classList.add("active")
+            imagens[imagem_ativa].classList.add("active");
+        })
+    </script>
 </body>
 
 </html>
