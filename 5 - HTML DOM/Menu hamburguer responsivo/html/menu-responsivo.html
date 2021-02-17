@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Menu hamburguer responsivo</title>
+
+</head>
+
+<body>
+    <nav class="navegador">
+        <div class="cabecalho-navegador">
+            <h3>Menu</h3>
+            <button>
+                &#9776
+            </button>
+        </div>
+        <div class="menu-retratil">
+            <a href="">Link 1</a>
+            <a href="">Link 2</a>
+            <a href="">Link 3</a>
+            <a href="">Link 4</a>
+        </div>
+    </nav>
+    <h1>Conteudo</h1>
+    <script>
+        let button = document.querySelector(".navegador .cabecalho-navegador button");
+        console.log(button)
+
+        let menu_retratil = document.querySelector(".navegador .menu-retratil");
+        console.log(menu_retratil)
+
+        button.addEventListener("click", function(){
+            menu_retratil.classList.toggle("active")
+        })
+    </script>
+</body>
+
+</html>
