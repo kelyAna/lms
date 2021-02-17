@@ -29,7 +29,11 @@ body{
     height: 0px;
     overflow: hidden;
     transition: height 600ms;
+    position: absolute;
+    background-color: rgb(233, 229, 229);
+    width: 100%;  
 }
+
 .navegador .menu-retratil.active{
     height: 150px;
 }
