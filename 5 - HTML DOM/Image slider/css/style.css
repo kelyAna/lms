@@ -1,0 +1,70 @@
+*{
+     padding: 0;
+     margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#slide-show{
+    position: relative;
+}
+
+#slide-show img{
+    display: none;
+}
+
+#slide-show img.active{
+    display: block;
+}
+
+#slide-show #seta-esquerda{
+    position: absolute;
+    padding: 10px;
+    left: 20px;
+    top:50%;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    transform: translate(0, -50%);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8%;
+    cursor: pointer;
+}
+
+#slide-show #seta-direita{
+    position: absolute;
+    padding: 10px;
+    right: 20px;
+    top: 50%;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    transform: translate(0, -50%);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8%;
+    cursor: pointer;
+}
+
+#indicadores{
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+#indicadores .indicador{
+    width: 30px;
+    background-color: rgba(255, 255, 255, .5);
+    height: 3px;
+}
+
+#indicadores .indicador.active{
+    background-color: white;
+}
