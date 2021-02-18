@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.mural{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.mural .card{
+    width: 200px;
+    /*height: 80;*/
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgb(200,200,200);
+}
+
+.mural .card .nome-card{
+    padding: 0px 0px 10px 0px;
+}
+
+form{
+    background-color: rgb(243, 240, 240);
+    width: 200px;
+    height: 160px;
+    padding: 15px;
+}
+
+form #botao-adicionar{
+    padding: 8px;
+    border: none;
+    background-color: rgb(232, 222, 222);
+    border-radius: 3px;
+}

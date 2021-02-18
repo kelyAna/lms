@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Exemplo formulário para adicionar cards</title>
+</head>
+
+<body>
+    <form action="">
+        Nome: <input class="nome-form" type="text"> <br> <br>
+        Mensagem: <input class="mensagem-form" type="text"> <br> <br>
+        <input id="botao-adicionar" type="submit" value="Adicionar">
+    </form>
+
+    <div class="mural">
+        <div class="card">
+            <h3 class="nome-card">João</h3>
+            <p class="mensagem-card">Oi, tudo bem?</p>
+        </div>
+
+        <div class="card">
+            <h3 class="nome-card">João</h3>
+            <p class="mensagem-card">Oi, tudo bem?</p>
+        </div>
+
+        <div class="card">
+            <h3 class="nome-card">João</h3>
+            <p class="mensagem-card">Oi, tudo bem?</p>
+        </div>
+
+        <div class="card">
+            <h3 class="nome-card">João</h3>
+            <p class="mensagem-card">Oi, tudo bem?</p>
+        </div>
+
+        <div class="card">
+            <h3 class="nome-card">João</h3>
+            <p class="mensagem-card">Oi, tudo bem?</p>
+        </div>
+
+        <div class="card">
+            <h3 class="nome-card">João</h3>
+            <p class="mensagem-card">Oi, tudo bem?</p>
+        </div>
+    </div>
+
+    <script>
+        let nome_form = document.querySelector(".nome-form");
+        let mensagem_form = document.querySelector(".mensagem-form");
+
+        let botao_adicionar = document.querySelector("#botao-adicionar");
+
+        let mural = document.querySelector(".mural")
+        
+        botao_adicionar.addEventListener("click", function(event){
+            event.preventDefault();
+            
+            let nome = nome_form.value;
+            let mensagem = mensagem_form.value;
+
+            let card = document.createElement("div");
+            card.classList.add("card");
+            mural.appendChild(card);
+
+            let h3 = document.createElement("h3");
+            h3.classList.add("nome-card");
+            
+            let text_h3 = document.createTextNode(nome);
+            h3.appendChild(text_h3);
+            card.appendChild(h3);
+
+            let p = document.createElement("p");
+            p.classList.add("mensagem-card");
+
+            let texto_p = document.createTextNode(mensagem);
+            p.appendChild(texto_p);
+            card.appendChild(p);
+        })
+    </script>
+</body>
+
+</html>
