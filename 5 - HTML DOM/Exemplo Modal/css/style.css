@@ -20,6 +20,9 @@ body{
     display: none;
     justify-content: center;
     align-items: center;
+
+    animation-name: aparecer;
+    animation-duration: 500ms;
 }
 .overlay-modal.active{
     display: flex;
@@ -49,6 +52,8 @@ body{
     height: 256px;
     border-radius: 5px;
     position: relative;
+    animation: cair 500ms;
+
 }
 
 .modal-container .modal-header{
@@ -102,3 +107,18 @@ body{
     background-color: #545b62;
 }
 
+@keyframes aparecer{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+@keyframes cair{
+    from{
+        transform: translate(0px, -300px);
+    }to{
+        transform: translate(0px, 0px);
+    }
+}
