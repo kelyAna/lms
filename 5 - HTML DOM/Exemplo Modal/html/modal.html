@@ -12,12 +12,31 @@
 
     <div class="overlay-modal">
         <div class="modal-container">
-            
+            <div class="modal-header">
+                <h3>Modal</h3>
+                <button> x </button>
+            </div>
+            <div class="modal-content">
+                <p>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                    classical
+                    Latin literature from 45 BC, making it over 2000 years old.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="botao-modal" id="botao-gray">
+                    Close
+                </button>
+
+                <button class="botao-modal" id="botao-blue">
+                    Save changes
+                </button>
+            </div>
         </div>
     </div>
 
     <div class="container">
-        <h2>Título</h2>
+        <h2>Título Modal</h2>
         <p>
             Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
             Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
@@ -32,7 +51,39 @@
             1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact
             original form, accompanied by English versions from the 1914 translation by H. Rackham.
         </p>
+
+        <button class="open-modal">
+            Abrir modal
+        </button>
     </div>
+
+
+    <script>
+        let openModal = document.querySelector(".open-modal");
+        let overlayModal = document.querySelector(".overlay-modal");
+        let x_fechar = document.querySelector("button");
+        let close = document.querySelector("#botao-gray");
+        console.log(openModal);
+        console.log(overlayModal);
+    
+        openModal.addEventListener("click", function(){
+            overlayModal.classList.add("active");
+        })
+
+        x_fechar.addEventListener("click", function(){
+            overlayModal.classList.remove("active");
+        })
+
+        close.addEventListener("click", function(){
+            overlayModal.classList.remove("active");
+        })
+    
+        window.addEventListener("click", function(event){
+            if(event.target == overlayModal){
+                overlayModal.classList.remove("active")
+            }
+        })
+    </script>
 </body>
 
 </html>
