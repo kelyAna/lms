@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo botão que adiciona nós</title>
+</head>
+
+<body>
+    <button class="button-create-h3">Me clique!</button>
+    <div class="container">
+        <h3>Título</h3>
+    </div>
+
+    <script>
+
+        let container = document.querySelector(".container");
+       
+
+        
+        let button_create_h3 = document.querySelector(".button-create-h3");
+        
+        button_create_h3.addEventListener("click", function () {
+
+            let h3 = document.createElement("h3");
+            console.log(h3)
+            container.appendChild(h3);
+
+            let text = document.createTextNode("Outro título");
+            h3.appendChild(text);
+
+        });
+
+    </script>
+</body>
+
+</html>
