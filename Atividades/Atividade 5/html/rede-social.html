@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Rede Social - Página Inicial</title>
+</head>
+
+<body>
+    <header>
+        <nav id="navegador">
+            <img src="../imagens/logo.png" alt="">
+            <div id="menu">
+                <div id="postar">
+                    <button id="botao-postar">POSTAR</button>
+                    <button id="botao-hamburguer">
+                        &#9776
+                    </button>
+                </div>
+                <div id="menu-hamburguer">
+                    <a href="">Postagens</a>
+                    <a href="">Seguidores</a>
+                    <a href="">Curtidas</a>
+                    <a href="">Comentários</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="overlay-modal">
+        <div id="modal-container">
+            <div id="modal-header">
+                <p>Adicione uma postagem</P>
+            </div>
+            <div class="modal-content">
+                <form action="">
+                    Nome <br>
+                    <input id="nome-form" type="text"> <br> <br>
+                    Mensagem <br>
+                    <input id="mensagem-form" type="text"> <br> <br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="botao-modal" id="botao-gray">
+                    Fechar
+                </button>
+
+                <button class="botao-modal" id="botao-blue">
+                    Postar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="container">
+        <div id="posts">
+
+        </div>
+    </div>
+
+    <script>
+        /* Menu retratil */
+        let button = document.querySelector("#navegador #menu #postar #botao-hamburguer");
+
+        let menu_retratil = document.querySelector("#navegador #menu-hamburguer");
+
+        let menu_esquerdo = document.querySelectorAll("navegador #menu")
+
+        button.addEventListener("click", function () {
+            menu_retratil.classList.toggle("active")
+            menu_esquerdo.classList.toggle("active")
+        })
+
+
+
+        /* Modal */
+        let openModal = document.querySelector("#navegador #menu #postar #botao-postar")
+        console.log(openModal)
+
+
+        let overlayModal = document.querySelector("#overlay-modal");
+
+        let close = document.querySelector("#botao-gray");
+        let postar = document.querySelector("#botao-blue")
+
+        openModal.addEventListener("click", function () {
+            overlayModal.classList.toggle("active");
+        })
+
+        close.addEventListener("click", function () {
+            overlayModal.classList.remove("active");
+        })
+
+        postar.addEventListener("click", function () {
+            overlayModal.classList.remove("active")
+        })
+
+
+
+        /* Formulário para adicionar postagens */
+
+        let posts_data = [
+            {
+                nome: "Carlos",
+                mensagem: "Tá quente hoje!",
+            },
+
+            {
+                nome: "Maria",
+                mensagem: "Tá quente hoje!",
+            },
+            {
+                nome: "Carlos",
+                mensagem: "Tá quente hoje!",
+            },
+        ]
+
+        let count = 0;
+        let posts = document.getElementById("posts");
+
+        for (let i = 0; i < posts_data.length; i++) {
+            let post = document.createElement("div");
+            post.classList.add("post");
+            posts.appendChild(post);
+
+            let span = document.createElement("span");
+            span.classList.add("nome-post");
+
+            let p = document.createElement("p");
+            p.classList.add("mensagem-post");
+
+            posts_data.map((post) => {
+                span.innerHTML = posts_data[i].nome;
+                p.innerHTML = posts_data[i].mensagem;
+            })
+            post.appendChild(span);
+            post.appendChild(p);
+
+            count++;
+            console.log(count)
+            if(count == 1){
+                post.classList.add("primeiro-post")
+            }
+        }
+
+        postar.addEventListener("click", function (event) {
+            event.preventDefault();
+            let posts = document.querySelector("#posts");
+
+            let nome_form = document.querySelector("#nome-form");
+            let mensagem_form = document.querySelector("#mensagem-form");
+
+            let nome = nome_form.value;
+            let mensagem = mensagem_form.value;
+
+
+            posts_data.nome = nome_form.value;
+            posts_data.mensagem = mensagem_form.value;
+
+            let post = document.createElement("div");
+            post.classList.add("post");
+            posts.appendChild(post);
+
+            let span = document.createElement("span");
+            span.classList.add("nome-post");
+            span.innerHTML = posts_data.nome;
+
+
+            post.appendChild(span);
+
+            let p = document.createElement("p");
+            p.classList.add("mensagem-post");
+            p.innerHTML = posts_data.mensagem
+
+
+            post.appendChild(p);
+            posts_data.appendChild(post)
+        })
+
+    </script>
+</body>
+
+</html>

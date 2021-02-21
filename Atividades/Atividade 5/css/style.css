@@ -1,0 +1,210 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color:rgb(209, 80, 102);
+    font-weight: lighter;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#navegador{
+    background-color:rgb(255, 255, 255);
+    height: 40px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: rgb(74, 74, 79);
+    display: flex
+}
+
+#navegador img{
+  width: 120px;
+  height: 100%;
+  padding: 20px;
+}
+
+#navegador #menu{
+    margin-left: auto;
+    display: block;
+}
+
+#navegador #menu #postar{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+#navegador #menu #postar button{
+    background-color:rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    height: 40px;
+    width: 40px;
+    margin-left: 20px;
+}
+
+#navegador #menu #postar #botao-postar{
+    margin-right: 13px;
+    border: none;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: rgb(74, 74, 79);
+}
+
+
+
+#navegador #menu #menu-hamburguer{
+    height: 0px;
+    overflow: hidden;
+    transition: height 800ms;
+    position: absolute;
+    animation: mudar-cor 600ms 8s infinite;
+    width: 400px;  
+    background-color: rgb(233, 229, 229);
+}
+
+#navegador #menu #menu-hamburguer.active{
+    height: 100%;
+    float: left;
+    position: fixed;
+}
+
+#navegador #menu #menu-hamburguer a{
+    text-decoration: none;
+    color: rgb(74, 74, 79);
+    display: block;
+    padding: 10px;
+}
+#overlay-modal{
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    animation-name: aparecer;
+    animation-duration: 500ms;
+}
+#overlay-modal.active{
+    display: flex;
+}
+
+#modal-container{
+    background-color: white;
+    width: 500px;
+    height: 256px;
+    border-radius: 5px;
+    position: relative;
+    animation: cair 500ms;
+}
+
+#modal-container #modal-header{
+    font-size: 20px;
+    display: flex;
+    color: rgb(32, 32, 33);
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px  rgba(0, 0, 0, 0.1);
+}
+
+#modal-container #modal-header button{
+    margin-left: auto;
+    background-color: transparent;
+    border: 0px;
+    width: 49px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#modal-container .modal-content{
+    padding: 20px;
+    text-align: justify;
+}
+
+#modal-container .modal-content form{
+    font-size: 18px;
+    color: rgb(32, 32, 33);
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-container .modal-footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border-top: solid 1px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+#modal-container .modal-footer .botao-modal{
+    border: none;
+    border-radius: 3px;
+    margin-left: 5px;
+    color: white;
+    padding: 10px;
+}
+
+#modal-container .modal-footer #botao-blue{
+    background-color: #0059b8;
+}
+
+#modal-container .modal-footer #botao-gray{
+    background-color: #81878c;
+}
+
+#container{
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 2%;
+}
+
+#container #posts {
+    padding: 40px;
+    align-items: center;
+    justify-self: center;
+}
+#container #posts .post{
+    margin: 10px;
+    background-color: white;
+    padding: 20px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+#container #posts .primeiro-post{
+    margin: 10px;
+    background-color: rgb(60, 52, 53);
+    color: white;
+    padding: 20px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes mudar-cor{
+    from{
+        background-color: rgb(233, 229, 229);
+    }
+
+    to{
+        background-color: rgb(245, 245, 245);
+    }
+}
+
