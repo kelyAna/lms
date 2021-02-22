@@ -109,11 +109,11 @@
 
             {
                 nome: "Maria",
-                mensagem: "Tá quente hoje!",
+                mensagem: "Tudo bem?",
             },
             {
                 nome: "Carlos",
-                mensagem: "Tá quente hoje!",
+                mensagem: "Oi!",
             },
         ]
 
@@ -139,11 +139,18 @@
             post.appendChild(p);
 
             count++;
-            console.log(count)
-            if(count == 1){
+            
+            if (count == 1) {
                 post.classList.add("primeiro-post")
+
+                function mudarTexto() {
+                    p.innerHTML = posts_data[i + 1].mensagem;
+                }
+                post = setTimeout(mudarTexto, 2000);
             }
         }
+
+
 
         postar.addEventListener("click", function (event) {
             event.preventDefault();
@@ -176,7 +183,6 @@
 
 
             post.appendChild(p);
-            posts_data.appendChild(post)
         })
 
     </script>
