@@ -13,6 +13,7 @@
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
+            width: 18rem;
         }
         .todo-galeria .card{
             margin: 10px;
@@ -47,100 +48,67 @@
             </div>
         </div>
     </nav>
+    
+    <div class="todo-galeria"></div>
 
-    <div class="todo-galeria">
-
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Notas</h5>
-                <p class="card-text">Ovo, pão e queijo.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Primeiro comentário</li>
-                <li class="list-group-item">Segunda comentário</li>
-                <li class="list-group-item">Terceiro comentário</li>
-            </ul>
-            <div class="card-body">
-                <form action="">
-                    <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Insira seu comentário.">
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Notas</h5>
-                <p class="card-text">Ovo, pão e queijo.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Primeiro comentário</li>
-                <li class="list-group-item">Segunda comentário</li>
-                <li class="list-group-item">Terceiro comentário</li>
-            </ul>
-            <div class="card-body">
-                <form action="">
-                    <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Insira seu comentário.">
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Notas</h5>
-                <p class="card-text">Ovo, pão e queijo.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Primeiro comentário</li>
-                <li class="list-group-item">Segunda comentário</li>
-                <li class="list-group-item">Terceiro comentário</li>
-            </ul>
-            <div class="card-body">
-                <form action="">
-                    <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Insira seu comentário.">
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Notas</h5>
-                <p class="card-text">Ovo, pão e queijo.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Primeiro comentário</li>
-                <li class="list-group-item">Segunda comentário</li>
-                <li class="list-group-item">Terceiro comentário</li>
-            </ul>
-            <div class="card-body">
-                <form action="">
-                    <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Insira seu comentário.">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
         crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <script>
+        let todo_galeria = document.querySelector(".todo-galeria")
+
+        function criarCard(titulo, corpo){
+            let card = document.createElement("div")
+            card.classList.add("card")
+
+            let cardBody = document.createElement("div")
+            cardBody.classList.add("card-body")
+
+            let cardTitle = document.createElement("h5")
+            cardTitle.classList.add("card-title")
+            cardTitle.textContent = titulo
+
+            let cardText = document.createElement("p")
+            cardText.classList.add("card-text")
+            cardText.textContent = corpo
+
+            card.appendChild(cardBody)
+            cardBody.appendChild(cardTitle)
+            cardBody.appendChild(cardText)
+
+            let cardBody1 = document.createElement("div")
+            cardBody1.classList.add("card-body")
+
+            let form = document.createElement("form")
+            
+            let input = document.createElement("input")
+            input.type = "text"
+            input.classList.add("form-control")
+            input.placeholder = "Insira seu comentário."
+
+            card.appendChild(cardBody1)
+            cardBody1.appendChild(form)
+            form.appendChild(input)
+
+            return card
+        }
+
         axios({
             method: "GET",
             url: "https://server-json-lms.herokuapp.com/todos",
         }).then((response)=>{
-                console.log(response)
+               let todos = response.data
+               for(let todo of todos){
+                   let card = criarCard(todo.titulo, todo.corpo)
+                   todo_galeria.appendChild(card)
+                }
             }).catch((error)=>{
                 console.log(error)
-            })
+        })
     </script>
 </body>
 
