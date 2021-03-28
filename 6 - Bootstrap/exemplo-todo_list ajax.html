@@ -52,6 +52,12 @@
 
     <div class="todo-galeria"></div>
 
+    <form id="form-novo-todo">
+        <input id="titulo" type="text" class="form-control" placeholder="Insira o título" style="width: 500px;">
+        <input id="corpo" type="text" class="form-control" placeholder="Insira o corpo" style="width: 500px;">
+
+        <button type="submit">Inserir</button>
+    </form>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
@@ -82,8 +88,8 @@
 
             let listGroup = document.createElement("ul")
             listGroup.classList.add("list-group",
-             "list-group-flush")
-            for(let note of notes){
+                "list-group-flush")
+            for (let note of notes) {
                 let li = document.createElement("li")
                 li.classList.add("list-group-item")
                 li.textContent = note.corpo
@@ -111,7 +117,7 @@
         function getNotesAndRender(todo) {
             axios({
                 method: "GET",
-                url: "https://server-json-lms.herokuapp.com/todos/"+todo.id+"/notes",
+                url: "https://server-json-lms.herokuapp.com/todos/" + todo.id + "/notes",
             }).then((response) => {
                 let notes = response.data
                 let card = criarCard(todo.titulo, todo.corpo, notes)
@@ -119,18 +125,42 @@
             }).catch((error) => {
                 console.log(error)
             })
-          }
+        }
 
-        axios({
-            method: "GET",
-            url: "https://server-json-lms.herokuapp.com/todos",
-        }).then((response) => {
-            let todos = response.data
-            for (let todo of todos) {
-                getNotesAndRender(todo)
-            }
-        }).catch((error) => {
-            console.log(error)
+        function atualizarTodoList() {
+            axios({
+                method: "GET",
+                url: "https://server-json-lms.herokuapp.com/todos",
+            }).then((response) => {
+                let todos = response.data
+                for (let todo of todos) {
+                    getNotesAndRender(todo)
+                }
+            }).catch((error) => {
+                console.log(error)
+            })
+        }
+
+        atualizarTodoList()
+        
+        let form_novo_todo = document.getElementById("form-novo-todo")
+        let input_form_titulo = document.querySelector("#form-novo-todo #titulo")
+        let input_form_todo = document.querySelector("#form-novo-todo #corpo")
+
+        form_novo_todo.addEventListener("submit", (event) => {
+            event.preventDefault()
+            axios({
+                method: "POST",
+                url: "https://server-json-lms.herokuapp.com/todos",
+                data: {
+                    titulo: input_form_titulo.value,
+                    corpo: input_form_todo.value
+                }
+            }).then((response) => {
+                atualizarTodoList()
+            }).catch((error) => {
+                console.log(error)
+            })
         })
     </script>
 </body>
