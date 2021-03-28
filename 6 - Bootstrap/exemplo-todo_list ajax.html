@@ -65,9 +65,24 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script>
+        function postNotesAndUpdatePage(corpo, todoId){
+            axios({
+                method: "POST",
+                url: "https://server-json-lms.herokuapp.com/notes",
+                data: {
+                    corpo: corpo,
+                    todoId: todoId
+                }
+            }).then((response)=>{
+                atualizarTodoList()
+            }).catch((error)=>{
+                console.log(error)
+            })
+        }
+
         let todo_galeria = document.querySelector(".todo-galeria")
 
-        function criarCard(titulo, corpo, notes) {
+        function criarCard(id,titulo, corpo, notes) {
             let card = document.createElement("div")
             card.classList.add("card")
 
@@ -107,6 +122,11 @@
             input.classList.add("form-control")
             input.placeholder = "Insira seu comentário."
 
+            form.addEventListener("submit", (event)=>{
+                event.preventDefault()
+                postNotesAndUpdatePage(input.value,id)
+            })
+
             card.appendChild(cardBody1)
             cardBody1.appendChild(form)
             form.appendChild(input)
@@ -120,7 +140,7 @@
                 url: "https://server-json-lms.herokuapp.com/todos/" + todo.id + "/notes",
             }).then((response) => {
                 let notes = response.data
-                let card = criarCard(todo.titulo, todo.corpo, notes)
+                let card = criarCard(todo.id,todo.titulo, todo.corpo, notes)
                 todo_galeria.appendChild(card)
             }).catch((error) => {
                 console.log(error)
@@ -128,6 +148,7 @@
         }
 
         function atualizarTodoList() {
+            todo_galeria.innerHTML = ""
             axios({
                 method: "GET",
                 url: "https://server-json-lms.herokuapp.com/todos",
