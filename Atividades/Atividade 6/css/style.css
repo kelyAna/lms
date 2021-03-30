@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(67, 65, 65);
+}
+
+.container{
+    background-color: rgba(242, 240, 240, 0.44);
+
+    width: 900px;
+    height: 100vh;
+
+    margin: 0 auto;
+}
+
+.container nav{
+    padding: 5px;
+    display: flex;
+
+    align-items: center;
+}
+
+.container nav span{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.container nav .usuario{
+    margin-left: auto;
+
+    font-weight: normal;
+}
+
+.container .logo img{
+    width: 60px;
+}
+
+.container .container-chat{
+    display: flex;
+}
+
+.container .container-chat .list-group{
+    background-color: rgba(232, 230, 230, 0.7);
+
+    width: 300px;
+    height: 100vh;
+}
+
+.container .container-chat .chat{
+    width: 600px;
+    height: 100vh;
+
+    margin-left: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(243, 239, 239);
+}
