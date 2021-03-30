@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(67, 65, 65);
+}
+
+.container{
+    background-color: rgba(242, 240, 240, 0.44);
+
+    width: 900px;
+    height: 100vh;
+
+    margin: 0 auto;
+}
+
+.container nav{
+    padding: 5px;
+    display: flex;
+
+    align-items: center;
+}
+
+.container nav span{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.container .logo img{
+    width: 60px;
+}
+
+.overlay-modal{
+    padding: 10px;
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.3);
+
+    top: 0;
+    left: 0;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-modal.active{
+    display: flex;
+}
+
+.container .open-modal{
+    margin-top: 20px;
+    border: none;
+    border-radius: 3px;
+    margin-left: 5px;
+    color: white;
+    padding: 12px;
+    background-color: #278bce;
+}
+
+.modal-container{
+    background-color: white;
+
+    width: 500px;
+    height: 256px;
+
+    border-radius: 5px;
+    position: relative;
+    animation: cair 500ms;
+
+    margin: 0 auto;
+}
+
+.modal-container .modal-header{
+    display: flex;
+    padding: 0px 20px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px  rgba(0, 0, 0, 0.1);
+}
+
+.modal-container .modal-header button{
+    margin-left: auto;
+    background-color: transparent;
+    border: 0px;
+    width: 49px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.modal-container .modal-content{
+    padding: 20px;
+    text-align: justify;
+}
+
+.modal-container .modal-footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border-top: solid 1px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-container .modal-footer .botao-modal{
+    border: none;
+    border-radius: 3px;
+    margin-left: 5px;
+    color: white;
+    padding: 9px;
+}
+
+.modal-container .modal-footer #botao-blue{
+    background-color: #0062cc;
+}
+
+.modal-container .modal-footer #botao-gray{
+    background-color: #545b62;
+}
+
+@keyframes aparecer{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+@keyframes cair{
+    from{
+        transform: translate(0px, -300px);
+    }to{
+        transform: translate(0px, 0px);
+    }
+}
