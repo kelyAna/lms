@@ -44,9 +44,6 @@
         </header>
 
         <div class="container-chat">
-            <div class="list-group">
-                Lista de grupos
-            </div>
 
             <div class="chat">
                 Chat
@@ -55,7 +52,13 @@
 
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <script>
+        /* MODAL */
         let overlayModal = document.querySelector(".overlay-modal");
         let logar = document.querySelector("#botao-blue");
         let input_nome = document.querySelector("#nome-usuario")
@@ -64,6 +67,65 @@
         logar.addEventListener("click", function () {
             overlayModal.classList.add("active");
         })
+
+        /* LISTAR GRUPOS */
+        let containerChat = document.querySelector(".container-chat")
+
+        function criarLista(id, nome) {
+            let containerGroup = document.createElement("div")
+            containerGroup.classList.add("list-group")
+
+            let listGroup = document.createElement("div")
+            listGroup.classList.add("grupos")
+
+            let itemList = document.createElement("div")
+            let imgGroup = document.createElement("img")
+            let span = document.createElement("span")
+
+            itemList.appendChild(imgGroup)
+            imgGroup.src = '../imagens/icon-group.png'
+
+            itemList.appendChild(imgGroup)
+            itemList.appendChild(span)
+            span.textContent = nome
+            listGroup.appendChild(itemList)
+
+
+            containerGroup.appendChild(listGroup)
+            containerChat.appendChild(containerGroup)
+
+            return containerGroup
+        }
+
+        function getGroupAndRender(grupo) {
+            axios({
+                method: "GET",
+                url: "https://server-json-lms.herokuapp.com/grupos",
+            }).then((response) => {
+                let grupos = response.data
+                let lista = criarLista(grupo.id, grupo.nome)
+                containerChat.appendChild(listGroup)
+            }).catch((error) => {
+                console.log(error)
+            })
+        }
+
+        function atualizarList() {
+            containerChat.innerHTML = ""
+            axios({
+                method: "GET",
+                url: "https://server-json-lms.herokuapp.com/grupos",
+            }).then((response) => {
+                let grupos = response.data
+                for (let grupo of grupos) {
+                    getGroupAndRender(grupo)
+                }
+            }).catch((error) => {
+                console.log(error)
+            })
+        }
+
+        atualizarList()
 
     </script>
 </body>
