@@ -44,9 +44,8 @@
         </header>
 
         <div class="container-chat">
-
             <div class="chat">
-                Chat
+                jtfrds
             </div>
         </div>
 
@@ -68,7 +67,11 @@
             overlayModal.classList.add("active");
         })
 
-        /* LISTAR GRUPOS */
+        /* GRUPOS */
+
+        //function postGroupAndUpdate(corpo,id)
+
+
         let containerChat = document.querySelector(".container-chat")
 
         function criarLista(id, nome) {
@@ -94,8 +97,29 @@
             containerGroup.appendChild(listGroup)
             containerChat.appendChild(containerGroup)
 
+            buttonGrupo.textContent = 'Inserir grupo'
+
+            inserirGroup.appendChild(inputGroup)
+            inserirGroup.appendChild(linha)
+            inserirGroup.appendChild(buttonGrupo)
+
+            containerGroup.appendChild(inserirGroup)
+            //containerGroup.appendChild(buttonGrupo)
+
             return containerGroup
         }
+
+        let inserirGroup = document.createElement("div")
+        inserirGroup.classList.add('inserir-group')
+
+        let inputGroup = document.createElement("input")
+        inputGroup.classList.add('input-group')
+
+        let linha = document.createElement("br")
+
+        let buttonGrupo = document.createElement("button")
+        buttonGrupo.classList.add('button-group')
+
 
         function getGroupAndRender(grupo) {
             axios({
