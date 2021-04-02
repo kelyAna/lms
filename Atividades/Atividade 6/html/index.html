@@ -44,10 +44,14 @@
         </header>
 
         <div class="container-chat">
-            <div class="chat">
-                jtfrds
-            </div>
+            
         </div>
+
+        <form id="form-novo-grupo">
+            <input id="grupo" type="text" class="form-control" placeholder="Insira um novo grupo">
+            <br>
+            <button type="submit">Inserir</button>
+        </form>
 
     </div>
 
@@ -61,7 +65,7 @@
         let overlayModal = document.querySelector(".overlay-modal");
         let logar = document.querySelector("#botao-blue");
         let input_nome = document.querySelector("#nome-usuario")
-        console.log(input_nome)
+        //console.log(input_nome)
 
         logar.addEventListener("click", function () {
             overlayModal.classList.add("active");
@@ -69,7 +73,20 @@
 
         /* GRUPOS */
 
-        //function postGroupAndUpdate(corpo,id)
+        function postGroupAndUpdate(nome, id) {
+            axios({
+                method: "POST",
+                url: "https://server-json-lms.herokuapp.com/grupos",
+                data: {
+                    nome: nome,
+                    todoId: id
+                }
+            }).then((response) => {
+                atualizarList()
+            }).catch((error) => {
+                console.log(error)
+            })
+        }
 
 
         let containerChat = document.querySelector(".container-chat")
@@ -97,29 +114,8 @@
             containerGroup.appendChild(listGroup)
             containerChat.appendChild(containerGroup)
 
-            buttonGrupo.textContent = 'Inserir grupo'
-
-            inserirGroup.appendChild(inputGroup)
-            inserirGroup.appendChild(linha)
-            inserirGroup.appendChild(buttonGrupo)
-
-            containerGroup.appendChild(inserirGroup)
-            //containerGroup.appendChild(buttonGrupo)
-
             return containerGroup
         }
-
-        let inserirGroup = document.createElement("div")
-        inserirGroup.classList.add('inserir-group')
-
-        let inputGroup = document.createElement("input")
-        inputGroup.classList.add('input-group')
-
-        let linha = document.createElement("br")
-
-        let buttonGrupo = document.createElement("button")
-        buttonGrupo.classList.add('button-group')
-
 
         function getGroupAndRender(grupo) {
             axios({
@@ -151,6 +147,24 @@
 
         atualizarList()
 
+
+        let form_novo_todo = document.getElementById("form-novo-grupo")
+        let input_form_titulo = document.querySelector("#form-novo-grupo #grupo")
+
+        form_novo_todo.addEventListener("submit", (event) => {
+            event.preventDefault()
+            axios({
+                method: "POST",
+                url: "https://server-json-lms.herokuapp.com/grupos",
+                data: {
+                    nome: input_form_titulo.value,
+                }
+            }).then((response) => {
+                atualizarList()
+            }).catch((error) => {
+                console.log(error)
+            })
+        })
     </script>
 </body>
 
