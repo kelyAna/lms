@@ -41,15 +41,71 @@ body{
 
 .container .container-chat {
    margin-top: 0;
-   width: 300px;
+   width: 100px;
+
+   height: 550px;
+}
+.container .mensagens{
+    background-image: url('../imagens/fundo.jpg');
+
+    margin:0;
+    height: 90vh;
+    background-color: rgba(242, 240, 240, 0.44);
+
+    margin-left: auto;
+	top:1%;
+	margin-top:-650px;
+    border: 1px solid rgb(220, 216, 216);
+        
+    width: 680px;
+}
+.container .mensagens .mensagem{
+    width: 50%;
+    margin: 0 auto;
+}
+.container .mensagens .mensagem ul{
+    list-style: none;
+
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
+.container .mensagens .mensagem ul li{
+    margin: 20px;
+    height: 20px;
+    padding: 10px;
 
+    width: 300px;
+    border-radius: 6%;
+    background-color: white;
+}
+
+.container .mensagens form{
+    position: relative;
+    top: 485px;
+    width: 50%;
+
+    margin: 0 auto;
+}
+.container .mensagens form #mensagem{
+    height: 30px;
+    width: 300px;
+}
+
+.container .mensagens form button{
+    padding: 4px;
+    background-color: rgb(26, 133, 214);
+    color: white;
+
+    border: none;
+    border-radius: 5%;
+}
 .container .container-chat .list-group{
     margin: 10px;
 
     display: block;
-    width: 300px;
+    width: 100px;
 }
 
 .container .container-chat .list-group img{
