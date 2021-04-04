@@ -8,6 +8,7 @@ body{
     color: rgb(67, 65, 65);
 }
 
+/* ESTILIZAÇÃO DO CONTEÚDO */
 .container{
     width: 900px;
     height: 100vh;
@@ -15,6 +16,7 @@ body{
     margin: 0 auto;
 }
 
+/* ESTILIZAÇÃO DO NAVEGADOR */
 .container nav{
     background-color: rgba(242, 240, 240, 0.44);
 
@@ -39,6 +41,7 @@ body{
     width: 60px;
 }
 
+/* ESTILIZAÇÃO DO CONTEÚDO DO CHAT, ONDE ESTÃO OS GRUPOS*/
 .container .container-chat {
    margin-top: 0;
    width: 100px;
@@ -48,6 +51,45 @@ body{
 .container .container-chat .grupos{
     cursor: pointer;
 }
+.container .container-chat .list-group{
+    margin: 10px;
+
+    display: block;
+    width: 200px;
+}
+
+.container .container-chat .list-group img{
+    width: 30px;
+}
+
+.container #form-novo-grupo{
+    position: relative;
+
+    top: 10px;
+}
+
+.container #form-novo-grupo input{
+    text-align: center;
+    margin: 3px;
+    width: 200px;
+    height: 30px;
+}
+.container #form-novo-grupo button{
+    margin: 3px;
+    margin-left: 150px;
+
+    color: white;
+    background-color: rgb(44, 143, 196);
+
+    border: none;
+    padding: 5px;
+    border-radius: 4%;
+
+    width: 50px;
+    font-size: 15px;
+    font-weight: bold;
+}
+/* ESTILIZAÇÃO DO CONTEÚDO DAS MENSAGENS */
 .container .mensagens{
     background-image: url('../imagens/fundo.jpg');
 
@@ -93,6 +135,7 @@ body{
     margin: 5px;
 }
 
+/* ESTILIZAÇÃO DO FORMULÁRIO DE ADICIONAR MENSAGEM */
 .container .adicionar-mensagem{
     position: relative;
     top: -90px;
@@ -114,47 +157,8 @@ body{
     border: none;
     border-radius: 5%;
 }
-.container .container-chat .list-group{
-    margin: 10px;
 
-    display: block;
-    width: 200px;
-}
-
-.container .container-chat .list-group img{
-    width: 30px;
-}
-
-.container #form-novo-grupo{
-    position: relative;
-
-    top: 10px;
-}
-
-.container #form-novo-grupo input{
-    text-align: center;
-    margin: 3px;
-    width: 200px;
-    height: 30px;
-}
-.container #form-novo-grupo button{
-    margin: 3px;
-    margin-left: 150px;
-
-    color: white;
-    background-color: rgb(44, 143, 196);
-
-    border: none;
-    padding: 5px;
-    border-radius: 4%;
-
-    width: 50px;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-/* MODAL */
-
+/* ESTILIZAÇÃO DO MODAL */
 .overlay-modal{
     padding: 3px;
     position: fixed;
