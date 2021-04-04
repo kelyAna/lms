@@ -9,6 +9,7 @@ logar.addEventListener("click", function () {
   login()
 })
 
+/*  LOGIN */
 function login(){
   let navegador = document.querySelector("nav")
   let usuario = document.querySelector(".usuario")
@@ -17,6 +18,7 @@ function login(){
   navegador.appendChild(usuario)
 }
 
+/* FORMULÁRIO DE MENSAGEM */
 let form_mensagem = document.querySelector(".adicionar-mensagem")
 let input_mensagem = document.querySelector(".adicionar-mensagem #mensagem")
 
@@ -26,6 +28,7 @@ let botao_mensagem = document.querySelector(".adicionar-mensagem #botao-mensagem
 /* GRUPOS */
 let id_grupo
 
+/* CRIAÇÃO DE UM GRUPO*/
 function postGroupAndUpdate(id, nome) {
   axios({
     method: "POST",
@@ -41,7 +44,7 @@ function postGroupAndUpdate(id, nome) {
   })
 }
 
-
+/*CRIAÇÃO DE UMA LISTA DE GRUPOS*/
 let containerChat = document.querySelector(".container-chat")
 let mensagens = document.querySelector(".mensagens")
 
@@ -75,7 +78,7 @@ function criarLista(id, nome) {
   return containerGroup
 }
 
-
+/* LISTAGEM E RENDERIZAÇÃO DE GRUPO */
 function getGroupAndRender(grupo) {
   axios({
     method: "GET",
@@ -88,6 +91,7 @@ function getGroupAndRender(grupo) {
   })
 }
 
+/* FUNÇÃO DE ATUALIZAR UM GRUPO */
 function atualizarList() {
   containerChat.innerHTML = ""
   axios({
@@ -105,7 +109,7 @@ function atualizarList() {
 
 atualizarList()
 
-
+/* FUNÇÃO DE CRIAÇÃO DE UM GRUPO A PARTIR DA AÇÃO DO FORMULÁRIO DE CRIAR NOVO GRUPO */
 let form_novo_todo = document.getElementById("form-novo-grupo")
 let input_form_titulo = document.querySelector("#form-novo-grupo #grupo")
 
@@ -128,6 +132,7 @@ form_novo_todo.addEventListener("submit", (event) => {
  *  Mensagens
  */
 
+/* FUNÇÃO DE CRIAR E LISTAR UMA MENSAGEM */
 function criarMensagem(mensagens) {
   let container_mensagens = document.querySelector(".mensagens")
   container_mensagens.innerHTML = ""
@@ -155,6 +160,7 @@ function criarMensagem(mensagens) {
   }
 }
 
+/* FUNÇÃO DE LISTAR MENSAGENS A PARTIR DE UM GRUPO */
 function listarMensagem(id) {
   id_grupo = id
 
@@ -169,6 +175,7 @@ function listarMensagem(id) {
   })
 }
 
+/* FUNÇÃO DE AÇÃO PARA CRIAR UMA MENSAGEM A PARTIR DO FORMULÁRIO DE CRIAÇÃO DE UMA MENSAGEM */
 form_mensagem.addEventListener("submit", (event) => {
   event.preventDefault()
   axios({
