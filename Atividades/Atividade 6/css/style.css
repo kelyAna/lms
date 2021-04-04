@@ -31,7 +31,7 @@ body{
 
 .container nav .usuario{
     margin-left: auto;
-
+    padding: 20px;
     font-weight: normal;
 }
 
@@ -45,16 +45,19 @@ body{
 
    height: 550px;
 }
+.container .container-chat .grupos{
+    cursor: pointer;
+}
 .container .mensagens{
     background-image: url('../imagens/fundo.jpg');
 
     margin:0;
-    height: 90vh;
+    height: 670px;
     background-color: rgba(242, 240, 240, 0.44);
 
     margin-left: auto;
-	top:1%;
-	margin-top:-650px;
+
+	margin-top:-645px;
     border: 1px solid rgb(220, 216, 216);
         
     width: 680px;
@@ -73,27 +76,37 @@ body{
 
 .container .mensagens .mensagem ul li{
     margin: 20px;
-    height: 20px;
+    height: 60px;
     padding: 10px;
 
     width: 300px;
     border-radius: 6%;
     background-color: white;
+    align-content: center;
 }
 
-.container .mensagens form{
+.container .mensagens .mensagem ul li span{
+    margin-right: 200px;
+}
+
+.container .mensagens .mensagem ul li p{
+    margin: 5px;
+}
+
+.container .adicionar-mensagem{
     position: relative;
-    top: 485px;
+    top: -90px;
     width: 50%;
 
-    margin: 0 auto;
+    margin-left: 420px;
 }
-.container .mensagens form #mensagem{
+.container .adicionar-mensagem #mensagem{
+    text-align: center;
     height: 30px;
     width: 300px;
 }
 
-.container .mensagens form button{
+.container .adicionar-mensagem button{
     padding: 4px;
     background-color: rgb(26, 133, 214);
     color: white;
@@ -105,32 +118,41 @@ body{
     margin: 10px;
 
     display: block;
-    width: 100px;
+    width: 200px;
 }
 
 .container .container-chat .list-group img{
     width: 30px;
 }
 
+.container #form-novo-grupo{
+    position: relative;
+
+    top: 10px;
+}
+
 .container #form-novo-grupo input{
+    text-align: center;
     margin: 3px;
     width: 200px;
     height: 30px;
 }
 .container #form-novo-grupo button{
     margin: 3px;
+    margin-left: 150px;
 
     color: white;
     background-color: rgb(44, 143, 196);
 
     border: none;
-    padding: 10px;
+    padding: 5px;
     border-radius: 4%;
 
-    width: 100px;
+    width: 50px;
     font-size: 15px;
     font-weight: bold;
 }
+
 /* MODAL */
 
 .overlay-modal{
@@ -187,7 +209,7 @@ body{
 .modal-container .modal-content{
     padding: 20px;
 
-    width: 35%;
+    width: 25%;
     margin: 0 auto;
 }
 
